@@ -90,13 +90,41 @@ Foram criadas consultas para verificar:
 - status inválidos;
 - valores zerados ou negativos.
 
-Evidências:
+### Validação de produto ativo sem estoque
+
+A consulta identifica produtos ativos que possuem estoque igual a zero.
+
+Resultado obtido: foi identificado produto ativo sem estoque.
 
 ![Produto ativo sem estoque](../screenshots/11_active_product_without_stock_validation.png)
 
+### Validação de consistência do total do pedido
+
+A consulta compara o valor total registrado na tabela `orders` com a soma dos itens registrados na tabela `order_items`.
+
+Resultado obtido: nenhum registro retornado.
+
+Conclusão: não foram identificadas divergências entre o total do pedido e a soma dos itens.
+
 ![Consistência do total do pedido](../screenshots/12_order_total_consistency_validation.png)
 
+### Validação de pedidos de usuários bloqueados
+
+A consulta verifica se existem pedidos vinculados a usuários com status `locked`.
+
+Resultado obtido: nenhum registro retornado.
+
+Conclusão: não foram identificados pedidos vinculados a usuários bloqueados.
+
 ![Pedidos de usuários bloqueados](../screenshots/13_blocked_user_orders_validation.png)
+
+### Validação de status inválido
+
+A consulta verifica se existem pedidos com status diferente dos valores permitidos: `pending`, `paid` ou `cancelled`.
+
+Resultado obtido: nenhum registro retornado.
+
+Conclusão: não foram identificados pedidos com status inválido.
 
 ![Validação de status inválido](../screenshots/14_invalid_status_validation.png)  
 
