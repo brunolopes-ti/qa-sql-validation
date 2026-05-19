@@ -128,3 +128,27 @@ Conclusão: não foram identificados pedidos com status inválido.
 
 ![Validação de status inválido](../screenshots/14_invalid_status_validation.png)  
 
+## 05 - Consultas com JOIN
+
+O script `05_join_queries.sql` foi criado para demonstrar consultas relacionais entre usuários, pedidos, itens de pedido e produtos.
+
+Foram aplicados:
+
+- INNER JOIN entre pedidos e usuários;
+- INNER JOIN entre itens de pedido e produtos;
+- múltiplos JOINs para visualizar o pedido completo;
+- LEFT JOIN para identificar usuários ou pedidos sem relacionamento;
+- cálculo do total dos itens por pedido.
+
+Essas consultas simulam validações realizadas por QA para confirmar se as informações exibidas no sistema estão consistentes com os dados gravados no banco.
+
+Evidências:
+
+![Pedidos com dados dos usuários](../screenshots/15_orders_with_users_join.png)
+
+![Pedido completo com usuário, produto e itens](../screenshots/16_complete_order_join.png)
+
+![Validação do total do pedido com JOIN](../screenshots/17_order_total_join_validation.png)  
+
+
+
