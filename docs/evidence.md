@@ -71,4 +71,32 @@ Evidências:
 
 ![Validação de produto inativo](../screenshots/09_inactive_products_validation.png)
 
-![Validação de pedidos por status](../screenshots/10_orders_by_status_validation.png)
+![Validação de pedidos por status](../screenshots/10_orders_by_status_validation.png)  
+
+## 04 - Validações de regras de negócio
+
+O script `04_validation_queries.sql` foi criado para validar possíveis inconsistências de dados em um cenário de e-commerce.
+
+Foram criadas consultas para verificar:
+
+- usuários bloqueados;
+- produtos ativos sem estoque;
+- produtos inativos;
+- pedidos sem itens;
+- divergência entre o valor total do pedido e a soma dos itens;
+- pedidos vinculados a usuários bloqueados ou inativos;
+- produtos inativos vinculados a pedidos;
+- produtos sem estoque vinculados a pedidos não cancelados;
+- status inválidos;
+- valores zerados ou negativos.
+
+Evidências:
+
+![Produto ativo sem estoque](../screenshots/11_active_product_without_stock_validation.png)
+
+![Consistência do total do pedido](../screenshots/12_order_total_consistency_validation.png)
+
+![Pedidos de usuários bloqueados](../screenshots/13_blocked_user_orders_validation.png)
+
+![Validação de status inválido](../screenshots/14_invalid_status_validation.png)  
+
